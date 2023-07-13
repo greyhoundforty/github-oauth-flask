@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My App</title>
+  <link href="{{ url_for('static', filename='tailwind.css') }}" rel="stylesheet">
+</head>
+
+<body>
+  {% if logged_in %}
+    <p>Welcome, {{ name }}!</p> 
+    <a href="/logout">Logout</a>
+  {% else %}
+    <a href="/login">Login with GitHub</a>
+  {% endif %}
+  
+  <hr>
+  <a href="{{ url_for('repos') }}" class="bg-blue-500 text-white p-2 rounded block text-center">
+    Show Repositories
+  </a>
+</body>
+</html>

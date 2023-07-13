@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Deployable Environments</title>
+  <link href="{{ url_for('static', filename='tailwind.css') }}" rel="stylesheet">
+</head>
+
+<body>
+
+<table>
+    <tr>
+      <th>Repo Name</th>
+      <th>Repo Description</th> 
+      <th>Repo Language</th>
+    </tr>
+    
+    {% for repo in repos %}
+    <tr>
+      <td>{{ repo.name }}</td>
+      <td>{{ repo.description }}</td>
+      <td>{{ repo.language }}</td>
+    </tr>
+    {% endfor %}
+    
+  </table>
+</body>
+</html>
